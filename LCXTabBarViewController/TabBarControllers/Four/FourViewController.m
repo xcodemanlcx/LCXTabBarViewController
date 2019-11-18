@@ -39,6 +39,8 @@
             [self.navigationController setNavigationBarHidden:NO animated:animated];
         }
     }else{
+        
+        //消失前重置，默认为导航模式
         _isPresentVC = NO;
     }
 }
