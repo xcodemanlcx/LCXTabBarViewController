@@ -7,6 +7,7 @@
 //
 
 #import "PresentNextViewController.h"
+#import "LCXTabBarViewController.h"
 
 @interface PresentNextViewController ()
 
@@ -17,6 +18,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UIButton *btn3 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn3.frame = CGRectMake(0, 40+100*3, [UIScreen mainScreen].bounds.size.width, 60);
+    [self.view addSubview:btn3];
+    [btn3 addTarget:self action:@selector(changeKeywindowRootViewControllerAction:) forControlEvents:UIControlEventTouchUpInside];
+    [btn3 setTitle:@"创建新keywindow rootViewController" forState:UIControlStateNormal];
+    [btn3 setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+}
+
+- (void)changeKeywindowRootViewControllerAction:(UIButton *)sender{
+    /*UIWindow的rootViewController赋新值，present 的ViewController不会自动释放，需dismissViewCodissntroller来释放；
+     */
+    [self dismissViewControllerAnimated:NO completion:^{
+        UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+        keyWindow.rootViewController = [LCXTabBarViewController new];
+    }];
 }
 
 /*

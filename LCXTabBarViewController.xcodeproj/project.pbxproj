@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0704291723822C4D00ADDB6E /* PresentNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0704291623822C4D00ADDB6E /* PresentNextViewController.m */; };
 		0746A2F4237D519B002EB82D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0746A2F3237D519B002EB82D /* AppDelegate.m */; };
 		0746A2FA237D519B002EB82D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0746A2F8237D519B002EB82D /* Main.storyboard */; };
 		0746A2FC237D519D002EB82D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0746A2FB237D519D002EB82D /* Assets.xcassets */; };
@@ -28,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0704291523822C4D00ADDB6E /* PresentNextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentNextViewController.h; sourceTree = "<group>"; };
+		0704291623822C4D00ADDB6E /* PresentNextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentNextViewController.m; sourceTree = "<group>"; };
 		0746A2EF237D519B002EB82D /* LCXTabBarViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LCXTabBarViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0746A2F2237D519B002EB82D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0746A2F3237D519B002EB82D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -136,6 +139,8 @@
 				0746A31C237D6270002EB82D /* BottomViewController.m */,
 				074FD803237E35A900A506CA /* PresentViewController.h */,
 				074FD804237E35A900A506CA /* PresentViewController.m */,
+				0704291523822C4D00ADDB6E /* PresentNextViewController.h */,
+				0704291623822C4D00ADDB6E /* PresentNextViewController.m */,
 			);
 			path = First;
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 				074FD819237E8BA700A506CA /* FourViewController.m in Sources */,
 				0746A2F4237D519B002EB82D /* AppDelegate.m in Sources */,
 				0746A316237D55D1002EB82D /* ThirdViewController.m in Sources */,
+				0704291723822C4D00ADDB6E /* PresentNextViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

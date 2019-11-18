@@ -9,6 +9,7 @@
 #import "PresentViewController.h"
 #import "UIViewController+SetTabBarSelectIndex.h"
 #import "LCXTabBarViewController.h"
+#import "PresentNextViewController.h"
 
 @interface PresentViewController ()
 
@@ -41,6 +42,13 @@
     [btn3 addTarget:self action:@selector(changeKeywindowRootViewControllerAction:) forControlEvents:UIControlEventTouchUpInside];
     [btn3 setTitle:@"创建新keywindow rootViewController" forState:UIControlStateNormal];
     [btn3 setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    
+    UIButton *btn4 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn4.frame = CGRectMake(0, 40+100*4, [UIScreen mainScreen].bounds.size.width, 60);
+    [self.view addSubview:btn4];
+    [btn4 addTarget:self action:@selector(pushAction:) forControlEvents:UIControlEventTouchUpInside];
+    [btn4 setTitle:@"push" forState:UIControlStateNormal];
+    [btn4 setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
 }
 
 - (void)dismissViewControllerAction:(UIButton *)sender{
@@ -54,7 +62,6 @@
         if (strongSelf.dissViewControllerBlock) {
             strongSelf.dissViewControllerBlock();
         }
-        [strongSelf setTabBarSelectIndex:1];
     }];
 }
 
@@ -65,6 +72,10 @@
         UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
         keyWindow.rootViewController = [LCXTabBarViewController new];
     }];
+}
+
+- (void)pushAction:(UIButton *)sender{
+    [self.navigationController pushViewController:[PresentNextViewController new] animated:YES];
 }
 /*
 #pragma mark - Navigation

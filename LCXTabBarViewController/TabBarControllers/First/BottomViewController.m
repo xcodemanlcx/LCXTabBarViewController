@@ -74,14 +74,12 @@
     __weak typeof (self) weakSelf = self;
     presentViewController.dissViewControllerBlock = ^{
         __strong typeof (weakSelf) strongSelf = weakSelf;
-        
         [strongSelf.navigationController popToRootViewControllerAnimated:NO];
-
         [self setTabBarSelectIndex:1];
     };
-    
-    [self presentViewController:presentViewController animated:YES completion:nil];
+    [self presentViewController:[[UINavigationController alloc] initWithRootViewController:presentViewController] animated:YES completion:nil];
 }
+
 /*
 #pragma mark - Navigation
 

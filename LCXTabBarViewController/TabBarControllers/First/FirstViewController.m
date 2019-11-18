@@ -24,8 +24,7 @@
     btn.frame = CGRectMake(0, 200, [UIScreen mainScreen].bounds.size.width, 60);
     [self.view addSubview:btn];
     [btn addTarget:self action:@selector(nextAction:) forControlEvents:UIControlEventTouchUpInside];
-    btn.reversesTitleShadowWhenHighlighted = NO;
-    [btn setTitle:@"下一个" forState:UIControlStateNormal];
+    [btn setTitle:@"push" forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
 }
 
