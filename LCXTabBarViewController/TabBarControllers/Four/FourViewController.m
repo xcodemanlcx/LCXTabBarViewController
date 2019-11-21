@@ -24,10 +24,8 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    if (!_isPresentVC ){
-        if (self.navigationController.navigationBar.isHidden == NO) {
-            [self.navigationController setNavigationBarHidden:YES animated:animated];
-        }
+    if (self.navigationController.navigationBar.isHidden == NO) {
+        [self.navigationController setNavigationBarHidden:YES animated:animated];
     }
 }
 
